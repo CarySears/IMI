@@ -471,6 +471,130 @@
             margin-top: 0.5rem;
         }
 
+        /* Resources Section */
+        .resources {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .resource-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+            border-color: var(--primary-color);
+        }
+
+        .resource-header {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .resource-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+        }
+
+        .resource-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .resource-subtitle {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .resource-content {
+            padding: 2rem;
+        }
+
+        .resource-content p {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .book-placeholder {
+            width: 100%;
+            height: 250px;
+            background: var(--background-light);
+            border: 3px dashed var(--primary-color);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1.5rem 0;
+            color: var(--primary-color);
+            font-style: italic;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .widget-placeholder {
+            width: 100%;
+            height: 200px;
+            background: var(--background-light);
+            border: 3px dashed var(--primary-color);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1.5rem 0;
+            color: var(--primary-color);
+            font-style: italic;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .btn-resource {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .btn-resource:hover {
+            background: var(--red-accent);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .btn-resource i {
+            font-size: 1.1rem;
+        }
+
         /* About Section */
         .about {
             padding: 6rem 2rem;
@@ -801,7 +925,7 @@
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#podcast" class="nav-link">Mindflow Radio</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li><a href="#book-session" class="cta-button">Book Session</a></li>
             </ul>
@@ -959,29 +1083,6 @@
         </div>
     </section>
 
-    <!-- Podcast Section -->
-    <section id="podcast" class="services" style="background: var(--white);">
-        <div class="container">
-            <div class="section-header scroll-reveal">
-                <h2 class="section-title">Mindflow Radio Podcast</h2>
-                <p class="section-subtitle">Tune in to our podcast for guided meditations, mindfulness conversations, and practical tools for mental wellness.</p>
-            </div>
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <div class="service-card" style="max-width: 600px; margin: 0 auto;">
-                    <div class="service-icon" style="margin: 0 auto 1.5rem;">
-                        <i class="fas fa-podcast"></i>
-                    </div>
-                    <h3>Listen & Transform</h3>
-                    <p>Our podcast features guided meditations, transcendental music, and conversations about mindfulness. Listening to meditation podcasts can create oxytocin which reduces stress and anxiety.</p>
-                    <div style="margin-top: 2rem;">
-                        <a href="#" class="btn-primary" style="margin-right: 1rem;">Listen on Spotify</a>
-                        <a href="#" class="btn-secondary" style="background: var(--primary-color); border: none; color: var(--white);">Apple Podcasts</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- FAQ Section -->
     <section class="faq">
         <div class="container">
@@ -1066,6 +1167,90 @@
         </div>
     </section>
 
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">Resources for Your Journey</h2>
+                <p class="section-subtitle">Discover our comprehensive collection of mindfulness tools, guides, and community resources to support your wellness journey.</p>
+            </div>
+            <div class="resources-grid">
+                <!-- Mindfulness Handbook -->
+                <div class="resource-card scroll-reveal">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>The Mindfulness Handbook</h3>
+                        <p class="resource-subtitle">Practical Tools & Background Theory</p>
+                    </div>
+                    <div class="resource-content">
+                        <p>Wellness pioneer and psychotherapist Lamont P. McPheron shares his expertise, giving you practical tools and easy-to-read background theory.</p>
+                        <div class="book-placeholder">
+                            📖 Book Cover Image<br>
+                            <small>Space reserved for "The Mindfulness Handbook and Workbook" cover</small>
+                        </div>
+                        <p>With practical tools and easy-to-read background theory, "The Mindfulness Handbook and Workbook" empowers readers to take the leap into a more mindful lifestyle. Effectively navigate through this complex culture, using "mindfulness on the fly" skills.</p>
+                        <p>Overcome negative self-talk by using "focus words". Move towards discernment, and away from judgmental thinking. Apply elements of tai chi standing and perception. Deepen your theoretical and experiential understanding of mindfulness.</p>
+                        <p>A three-week workbook is included, to assist you in building the habit of mindful living.</p>
+                        <a href="#" class="btn-resource">
+                            <i class="fab fa-amazon"></i>
+                            We are on Amazon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mindfulness Radio -->
+                <div class="resource-card scroll-reveal">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-podcast"></i>
+                        </div>
+                        <h3>Mindfulness Radio</h3>
+                        <p class="resource-subtitle">Guided Meditations & Conversations</p>
+                    </div>
+                    <div class="resource-content">
+                        <p>Our podcast features guided meditations, transcendental music, and conversations about mindfulness. Listening to meditation podcasts can create oxytocin which reduces stress and anxiety.</p>
+                        <p>Tune in for practical mindfulness tools, expert insights, and transformative guided sessions that you can incorporate into your daily routine.</p>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                            <a href="#" class="btn-resource">
+                                <i class="fab fa-spotify"></i>
+                                Listen on Spotify
+                            </a>
+                            <a href="#" class="btn-resource">
+                                <i class="fas fa-podcast"></i>
+                                Apple Podcasts
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insight Timer -->
+                <div class="resource-card scroll-reveal">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Insight Timer</h3>
+                        <p class="resource-subtitle">6M+ Community Members</p>
+                    </div>
+                    <div class="resource-content">
+                        <p>You can find our music and meditations as well. Insight Timer is a meditation application that hosts over 6 million users seeking self-help on their journey to a better life.</p>
+                        <p>Mindflow Radio is grateful to contribute to this collective effort of other teachers and practitioners sharing wisdom and guidance for mental wellness.</p>
+                        <div class="widget-placeholder">
+                            🧘‍♀️ Insight Timer Widget<br>
+                            <small>Integration space reserved for Insight Timer widget</small>
+                        </div>
+                        <a href="#" class="btn-resource">
+                            <i class="fas fa-heart"></i>
+                            Join our Insight Timer tribe
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section id="book-session" class="cta-section">
         <div class="container">
@@ -1105,7 +1290,7 @@
                 </div>
                 <div class="footer-section">
                     <h3>Resources</h3>
-                    <a href="#podcast">Mindflow Radio Podcast</a>
+                    <a href="#resources">Resources</a>
                     <a href="#">Mindfulness Handbook</a>
                     <a href="#">Insight Timer</a>
                     <a href="#">Free Monthly Mindfulness</a>
