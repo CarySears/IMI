@@ -286,6 +286,9 @@
             transition: var(--transition);
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .service-card::before {
@@ -359,7 +362,10 @@
         .service-buttons {
             display: flex;
             gap: 0.5rem;
-            margin-top: 1.5rem;
+            margin-top: auto;
+            justify-content: center;
+            align-items: center;
+            padding-top: 1.5rem;
         }
 
         .btn-book {
