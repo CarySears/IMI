@@ -413,18 +413,41 @@
             position: relative;
             border-radius: var(--border-radius);
             overflow: hidden;
-            box-shadow: var(--shadow-medium);
+            box-shadow: var(--shadow-heavy);
+            background: var(--gradient-primary);
+            padding: 8px;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius);
+            z-index: -1;
         }
 
         .about-image img {
             width: 100%;
-            height: 400px;
+            height: 450px;
             object-fit: cover;
+            object-position: center;
             transition: var(--transition);
+            border-radius: calc(var(--border-radius) - 4px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .about-image:hover img {
-            transform: scale(1.05);
+            transform: scale(1.02);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(135, 206, 235, 0.3);
         }
 
         /* Stats Section */
@@ -800,7 +823,7 @@
                     <a href="#contact" class="btn-primary">Connect With Us</a>
                 </div>
                 <div class="about-image scroll-reveal">
-                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><defs><linearGradient id='grad2' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%2387ceeb;stop-opacity:1' /><stop offset='100%' style='stop-color:%2387ceeb;stop-opacity:1' /></linearGradient></defs><rect width='600' height='400' fill='url(%23grad2)'/><circle cx='300' cy='200' r='80' fill='%23ffd700' opacity='0.3'/><circle cx='300' cy='200' r='60' fill='%23ffffff' opacity='0.4'/><circle cx='300' cy='200' r='40' fill='%23dc143c' opacity='0.2'/></svg>" alt="Jai & Monte McPheron - Mindfulness Therapists">
+                    <img src="Monte and Jai8019.jpg" alt="Jai & Monte McPheron - Mindfulness Therapists and Founders of IMI">
                 </div>
             </div>
         </div>
