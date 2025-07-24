@@ -611,6 +611,24 @@
             box-shadow: var(--shadow-heavy);
         }
 
+        .book-cover {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: var(--border-radius);
+            margin: 1.5rem auto;
+            display: block;
+            box-shadow: var(--shadow-heavy);
+            transition: var(--transition);
+            border: 2px solid rgba(135, 206, 235, 0.3);
+        }
+
+        .book-cover:hover {
+            transform: scale(1.03) translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border-color: var(--primary-color);
+        }
+
         /* About Section */
         .about {
             padding: 6rem 2rem;
@@ -1118,10 +1136,7 @@
                     </div>
                     <div class="resource-content">
                         <p>Wellness pioneer and psychotherapist Lamont P. McPheron shares his expertise, giving you practical tools and easy-to-read background theory.</p>
-                        <div class="book-placeholder">
-                            📖 Book Cover Image<br>
-                            <small>Space reserved for "The Mindfulness Handbook and Workbook" cover</small>
-                        </div>
+                        <img src="Mindfulness_Handbook_V3.avif" alt="The Mindfulness Handbook and Workbook by Lamont P. McPheron" class="book-cover">
                         <p>With practical tools and easy-to-read background theory, "The Mindfulness Handbook and Workbook" empowers readers to take the leap into a more mindful lifestyle. Effectively navigate through this complex culture, using "mindfulness on the fly" skills.</p>
                         <p>Overcome negative self-talk by using "focus words". Move towards discernment, and away from judgmental thinking. Apply elements of tai chi standing and perception. Deepen your theoretical and experiential understanding of mindfulness.</p>
                         <p>A three-week workbook is included, to assist you in building the habit of mindful living.</p>
