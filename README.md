@@ -36,9 +36,10 @@ This is a completely redesigned and improved version of the IMI.earth (Integrate
 ## 🎨 Design Features
 
 ### Color Palette
-- **Primary Green**: #2c5530 (trust, nature, healing)
-- **Secondary Green**: #7fb069 (growth, wellness)
-- **Accent Orange**: #f4a261 (warmth, energy)
+- **Primary Sky Blue**: #1e88e5 (trust, calm, professionalism)
+- **Secondary Light Blue**: #87ceeb (serenity, peace)
+- **Accent Gold**: #ffd700 (warmth, wisdom, value)
+- **Red Accent**: #dc143c (energy, passion, action)
 - **Professional Grays**: For text and subtle elements
 
 ### Typography

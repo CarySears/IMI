@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #2c5530;
-            --secondary-color: #7fb069;
-            --accent-color: #f4a261;
+            --primary-color: #1e88e5;
+            --secondary-color: #87ceeb;
+            --accent-color: #ffd700;
+            --red-accent: #dc143c;
             --text-dark: #2d3436;
             --text-light: #636e72;
-            --background-light: #f8f9fa;
+            --background-light: #f0f8ff;
             --white: #ffffff;
-            --gradient-primary: linear-gradient(135deg, #2c5530 0%, #7fb069 100%);
-            --gradient-secondary: linear-gradient(135deg, #f4a261 0%, #e76f51 100%);
+            --gradient-primary: linear-gradient(135deg, #1e88e5 0%, #87ceeb 100%);
+            --gradient-secondary: linear-gradient(135deg, #ffd700 0%, #dc143c 100%);
+            --gradient-blue: linear-gradient(135deg, #87ceeb 0%, #1e88e5 100%);
             --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.05);
             --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.1);
             --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.15);
@@ -74,7 +76,7 @@
 
         .logo i {
             font-size: 1.5rem;
-            color: var(--secondary-color);
+            color: var(--accent-color);
         }
 
         .nav-menu {
@@ -103,7 +105,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--secondary-color);
+            background: var(--accent-color);
             transition: var(--transition);
         }
 
@@ -144,7 +146,7 @@
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, rgba(44, 85, 48, 0.9), rgba(127, 176, 105, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23e8f5e8;stop-opacity:1" /><stop offset="100%" style="stop-color:%23c8e6c9;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="800" fill="url(%23grad1)"/><circle cx="200" cy="150" r="3" fill="%23a5d6a7" opacity="0.6"/><circle cx="800" cy="300" r="2" fill="%23a5d6a7" opacity="0.4"/><circle cx="1000" cy="200" r="4" fill="%23a5d6a7" opacity="0.5"/><circle cx="300" cy="600" r="2" fill="%23a5d6a7" opacity="0.7"/></svg>');
+            background: linear-gradient(135deg, rgba(30, 136, 229, 0.9), rgba(135, 206, 235, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23e6f3ff;stop-opacity:1" /><stop offset="100%" style="stop-color:%23b3d9ff;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="800" fill="url(%23grad1)"/><circle cx="200" cy="150" r="3" fill="%2387ceeb" opacity="0.6"/><circle cx="800" cy="300" r="2" fill="%2387ceeb" opacity="0.4"/><circle cx="1000" cy="200" r="4" fill="%2387ceeb" opacity="0.5"/><circle cx="300" cy="600" r="2" fill="%2387ceeb" opacity="0.7"/></svg>');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -301,7 +303,7 @@
         }
 
         .service-link {
-            color: var(--secondary-color);
+            color: var(--primary-color);
             text-decoration: none;
             font-weight: 600;
             display: inline-flex;
@@ -311,7 +313,7 @@
         }
 
         .service-link:hover {
-            color: var(--primary-color);
+            color: var(--red-accent);
         }
 
         /* About Section */
@@ -409,7 +411,7 @@
             top: -10px;
             left: 20px;
             font-size: 4rem;
-            color: var(--secondary-color);
+            color: var(--accent-color);
             font-family: 'Playfair Display', serif;
         }
 
@@ -484,7 +486,7 @@
 
         .footer-section h3 {
             margin-bottom: 1rem;
-            color: var(--secondary-color);
+            color: var(--accent-color);
         }
 
         .footer-section p,
@@ -518,7 +520,7 @@
         }
 
         .social-link:hover {
-            background: var(--secondary-color);
+            background: var(--accent-color);
             transform: translateY(-2px);
         }
 
@@ -742,7 +744,7 @@
                     <a href="#contact" class="btn-primary">Connect With Us</a>
                 </div>
                 <div class="about-image scroll-reveal">
-                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><defs><linearGradient id='grad2' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%232c5530;stop-opacity:1' /><stop offset='100%' style='stop-color:%237fb069;stop-opacity:1' /></linearGradient></defs><rect width='600' height='400' fill='url(%23grad2)'/><circle cx='300' cy='200' r='80' fill='%23ffffff' opacity='0.2'/><circle cx='300' cy='200' r='60' fill='%23ffffff' opacity='0.3'/><circle cx='300' cy='200' r='40' fill='%23ffffff' opacity='0.4'/></svg>" alt="Jai & Monte McPheron - Mindfulness Therapists">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><defs><linearGradient id='grad2' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%231e88e5;stop-opacity:1' /><stop offset='100%' style='stop-color:%2387ceeb;stop-opacity:1' /></linearGradient></defs><rect width='600' height='400' fill='url(%23grad2)'/><circle cx='300' cy='200' r='80' fill='%23ffd700' opacity='0.3'/><circle cx='300' cy='200' r='60' fill='%23ffffff' opacity='0.4'/><circle cx='300' cy='200' r='40' fill='%23dc143c' opacity='0.2'/></svg>" alt="Jai & Monte McPheron - Mindfulness Therapists">
                 </div>
             </div>
         </div>
@@ -806,7 +808,7 @@
                     <p>Our podcast features guided meditations, transcendental music, and conversations about mindfulness. Listening to meditation podcasts can create oxytocin which reduces stress and anxiety.</p>
                     <div style="margin-top: 2rem;">
                         <a href="#" class="btn-primary" style="margin-right: 1rem;">Listen on Spotify</a>
-                        <a href="#" class="btn-secondary" style="background: var(--secondary-color); border: none; color: var(--white);">Apple Podcasts</a>
+                        <a href="#" class="btn-secondary" style="background: var(--primary-color); border: none; color: var(--white);">Apple Podcasts</a>
                     </div>
                 </div>
             </div>
