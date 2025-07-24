@@ -320,18 +320,18 @@
         }
 
         .service-photo {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            object-position: center;
+            object-position: center top;
             margin-bottom: 1.5rem;
             border: 3px solid var(--primary-color);
             box-shadow: var(--shadow-medium);
             transition: var(--transition);
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
-            -ms-interpolation-mode: bicubic;
+            image-rendering: auto;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
         }
 
         .service-photo:hover {
