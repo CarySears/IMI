@@ -595,6 +595,22 @@
             font-size: 1.1rem;
         }
 
+        .podcast-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: var(--border-radius);
+            margin: 1.5rem auto;
+            display: block;
+            box-shadow: var(--shadow-medium);
+            transition: var(--transition);
+        }
+
+        .podcast-image:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-heavy);
+        }
+
         /* About Section */
         .about {
             padding: 6rem 2rem;
@@ -1127,6 +1143,7 @@
                     </div>
                     <div class="resource-content">
                         <p>Our podcast features guided meditations, transcendental music, and conversations about mindfulness. Listening to meditation podcasts can create oxytocin which reduces stress and anxiety.</p>
+                        <img src="Mindflow Radio.png" alt="Mindflow Radio Podcast Artwork" class="podcast-image">
                         <p>Tune in for practical mindfulness tools, expert insights, and transformative guided sessions that you can incorporate into your daily routine.</p>
                         <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
                             <a href="#" class="btn-resource">
