@@ -319,6 +319,23 @@
             font-size: 1.5rem;
         }
 
+        .service-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            margin-bottom: 1.5rem;
+            border: 3px solid var(--primary-color);
+            box-shadow: var(--shadow-medium);
+            transition: var(--transition);
+        }
+
+        .service-photo:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-heavy);
+        }
+
         .service-card h3 {
             font-size: 1.5rem;
             color: var(--primary-color);
@@ -1042,9 +1059,7 @@
                     </div>
                 </div>
                 <div class="service-card scroll-reveal">
-                    <div class="service-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
+                    <img src="JaiIMG_2135.JPG" alt="Jai McPheron - Certified Professional Yoga Therapist and Life Coach" class="service-photo">
                     <h3>Mindful Wellness Coaching with Jai</h3>
                     <p>Personalized self-care routines for you based on Jai's library of tools and your goals. Develop sustainable wellness practices tailored to your unique needs.</p>
                     <div class="service-price">$120</div>
