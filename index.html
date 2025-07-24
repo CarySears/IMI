@@ -335,6 +335,54 @@
             color: var(--red-accent);
         }
 
+        .service-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+
+        .service-date {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .service-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .btn-book {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .btn-explore {
+            background: transparent;
+            color: var(--primary-color);
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .btn-book:hover, .btn-explore:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
         /* About Section */
         .about {
             padding: 6rem 2rem;
@@ -670,57 +718,46 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header scroll-reveal">
-                <h2 class="section-title">Our Comprehensive Services</h2>
-                <p class="section-subtitle">We offer a holistic approach to mental wellness, combining therapy, coaching, and mindfulness practices to support your journey.</p>
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Choose from our personalized mindfulness and coaching programs designed to help you develop inner peace and personal growth.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card scroll-reveal">
                     <div class="service-icon">
-                        <i class="fas fa-brain"></i>
+                        <i class="fas fa-clock"></i>
                     </div>
-                    <h3>Mental Health Therapy</h3>
-                    <p>Professional therapy sessions to help you navigate stress, anxiety, depression, and other mental health challenges with evidence-based approaches.</p>
-                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card scroll-reveal">
-                    <div class="service-icon">
-                        <i class="fas fa-compass"></i>
+                    <h3>Mindful Moments</h3>
+                    <div class="service-date">6 Weeks of Mindful Skills Practice with Jai and Monte<br>September 2 - October 7</div>
+                    <p>Join our structured 6-week program to develop essential mindfulness skills through guided practice sessions with both Jai and Monte.</p>
+                    <div class="service-price">$25</div>
+                    <div class="service-buttons">
+                        <a href="#contact" class="btn-book">Book Now</a>
+                        <a href="#contact" class="btn-explore">Explore Plans</a>
                     </div>
-                    <h3>Life Coaching</h3>
-                    <p>Personalized coaching to help you achieve your goals, overcome obstacles, and become the best version of yourself.</p>
-                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card scroll-reveal">
-                    <div class="service-icon">
-                        <i class="fas fa-om"></i>
-                    </div>
-                    <h3>Mindfulness & Meditation</h3>
-                    <p>Learn practical mindfulness techniques and meditation practices to reduce stress and increase mental clarity.</p>
-                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card scroll-reveal">
                     <div class="service-icon">
                         <i class="fas fa-heart"></i>
                     </div>
-                    <h3>Trauma Recovery</h3>
-                    <p>Specialized support for trauma recovery using mindfulness-based approaches and evidence-based therapeutic techniques.</p>
-                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <h3>Mindful Wellness Coaching with Jai</h3>
+                    <p>Personalized self-care routines for you based on Jai's library of tools and your goals. Develop sustainable wellness practices tailored to your unique needs.</p>
+                    <div class="service-price">$120</div>
+                    <div class="service-buttons">
+                        <a href="#contact" class="btn-book">Book Now</a>
+                        <a href="#contact" class="btn-explore">Explore Plans</a>
+                    </div>
                 </div>
                 <div class="service-card scroll-reveal">
                     <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-brain"></i>
                     </div>
-                    <h3>Veterans Support</h3>
-                    <p>Dedicated support for veterans dealing with PTSD and other service-related mental health challenges.</p>
-                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card scroll-reveal">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
+                    <h3>Mind Training with Monte</h3>
+                    <p>I will teach you a variety of mind skills which lead to empowerment and a growth mindset. Transform your thinking patterns for lasting positive change.</p>
+                    <div class="service-price">$72</div>
+                    <div class="service-buttons">
+                        <a href="#contact" class="btn-book">Book Now</a>
+                        <a href="#contact" class="btn-explore">Explore Plans</a>
                     </div>
-                    <h3>Group Sessions</h3>
-                    <p>Join our supportive community in group therapy and mindfulness sessions for shared healing and growth.</p>
-                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
