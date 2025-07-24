@@ -320,8 +320,8 @@
         }
 
         .service-photo {
-            width: 80px;
-            height: 80px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
             object-position: center;
@@ -329,6 +329,9 @@
             border: 3px solid var(--primary-color);
             box-shadow: var(--shadow-medium);
             transition: var(--transition);
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            -ms-interpolation-mode: bicubic;
         }
 
         .service-photo:hover {
