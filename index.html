@@ -383,6 +383,94 @@
             box-shadow: var(--shadow-medium);
         }
 
+        /* FAQ Section */
+        .faq {
+            padding: 6rem 2rem;
+            background: var(--background-light);
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-medium);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: var(--white);
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: var(--background-light);
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer blockquote {
+            background: var(--background-light);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .faq-answer .quote-author {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
         /* About Section */
         .about {
             padding: 6rem 2rem;
@@ -894,6 +982,90 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about our mindfulness practices, services, and approach to mental wellness.</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span>What's the difference between life coaching and therapy?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>With IMI, you can choose both! Jai is a certified professional yoga therapist and a life coach. Monte is a professional mental health therapist and Tai Chi Instructor who works extensively with meditation and mindfulness-based techniques.</p>
+                        <blockquote>
+                            "Therapy helps you do a deep dive into your psyche and reconnect the dots of who you are. Life coaching helps you take on external challenges and become the version of yourself you know you have the potential to be."
+                            <div class="quote-author">- Stephanie Hairston, Open Counseling</div>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span>How does IMI approach trauma recovery?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>According to Trauma-Informed Care, trauma "results from exposure to an incident or series of events that are emotionally disturbing or life-threatening with lasting adverse effects on the individual's functioning and mental, physical, social, emotional, and/or spiritual well-being."</p>
+                        <p>IMI works with mindfulness practices to elevate subconscious thoughts to help overcome some of the adverse effects that trauma has on our lives. We all experience trauma in different ways. Working to live mindfully can provide peace of mind and personal confidence.</p>
+                    </div>
+                </div>
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span>Do you work with veterans?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! IMI works with veterans and the unique challenges they face. Mindfulness and meditation-based activities are used extensively through Department of Veterans Affairs programs.</p>
+                        <blockquote>
+                            "Veterans suffering from PTSD find that mindfulness-based stress reduction reduces the severity of PTSD symptoms."
+                            <div class="quote-author">- Results from a clinical trial conducted by Dr. Melissa A. Polusny, Minneapolis VA Medical Center</div>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span>What are your service offerings and pricing?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer three main services:</p>
+                        <p><strong>Mindful Moments ($25):</strong> 6 weeks of mindful skills practice with both Jai and Monte (September 2 - October 7)</p>
+                        <p><strong>Mindful Wellness Coaching with Jai ($120):</strong> Personalized self-care routines based on Jai's library of tools and your goals</p>
+                        <p><strong>Mind Training with Monte ($72):</strong> Learn a variety of mind skills that lead to empowerment and a growth mindset</p>
+                    </div>
+                </div>
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span>What is mindfulness and how can it help me?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Mindfulness is the practice of being present and fully engaged with whatever we're doing at the moment, free from distraction or judgment. Our approach combines traditional mindfulness techniques with modern therapeutic practices.</p>
+                        <p>Benefits include reduced stress and anxiety, improved emotional regulation, better sleep, enhanced focus, and greater overall well-being. We help you develop practical mindfulness skills that you can use in daily life.</p>
+                    </div>
+                </div>
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span>How do I get started?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Getting started is easy! You can:</p>
+                        <p>• Call us at (608) 632-1037 to discuss your needs and schedule a consultation</p>
+                        <p>• Email us at connect@imi.earth with any questions</p>
+                        <p>• Choose from our three service offerings and book directly</p>
+                        <p>• Listen to our Mindflow Radio podcast to get a feel for our approach</p>
+                        <p>We're here to support you every step of the way on your mindfulness journey.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section id="book-session" class="cta-section">
         <div class="container">
@@ -1043,6 +1215,24 @@
         if (statsSection) {
             statsObserver.observe(statsSection);
         }
+
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't already active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>
