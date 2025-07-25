@@ -712,6 +712,12 @@
             font-size: 1.1rem;
         }
 
+        .about-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
         .about-image {
             position: relative;
             border-radius: var(--border-radius);
@@ -964,6 +970,11 @@
                 gap: 2rem;
             }
 
+            .about-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
             .services-grid {
                 grid-template-columns: 1fr;
             }
@@ -1109,7 +1120,10 @@
                     <p><strong>Jai</strong> is a certified professional yoga therapist and life coach, specializing in holistic wellness approaches.</p>
                     <p><strong>Monte</strong> is a professional mental health therapist and Tai Chi instructor who works extensively with meditation and mindfulness-based techniques.</p>
                     <p>Together, we offer a unique blend of traditional therapy and innovative mindfulness practices to support your journey toward mental wellness.</p>
-                    <a href="#contact" class="btn-primary">Connect With Us</a>
+                    <div class="about-buttons">
+                        <a href="#contact" class="btn-primary">Connect With Us</a>
+                        <a href="#faq" class="btn-secondary">Learn More About Us</a>
+                    </div>
                 </div>
                 <div class="about-image scroll-reveal">
                     <img src="Monte and Jai8019.jpg" alt="Jai & Monte McPheron - Mindfulness Therapists and Founders of IMI">
