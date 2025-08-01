@@ -2038,12 +2038,29 @@
         });
     </script>
 
-    <!-- Chatbot Widget -->
-    <script 
-        src="https://widgets.leadconnectorhq.com/loader.js"  
-        data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
-        data-widget-id="6882cdeb81758b40433c0813"   > 
+    <!-- Start Engagement Widget Script -->
+    <script>
+        window.engagementContextExtra = {
+            // Add your custom data here
+        };
+        (function (w, i, d, g, e, t) {
+            const s = w.createElement(i);
+            d.forEach(([k, v]) => s.setAttribute(k, v));
+            w.body.appendChild(s);
+        })(
+            document,
+            'script',
+            [['async', 1],
+                ['crossorigin', 1],
+                ['type', 'module'],
+                ['id', 'engagementWidget'],
+                ['src', 'https://cdn.chatwidgets.net/widget/livechat/bundle.js'],
+                ['data-env', '//graph.mycrmsupport.net'],
+                ['data-instance', 'aIv8-MWb7tR2L0Vp'],
+                ['data-container', '#engagement-widget-container']]
+        );
     </script>
+    <!-- End Engagement Widget Script -->
     
     <!-- Booking Modal -->
     <div id="bookingModal" class="booking-modal">
