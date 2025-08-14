@@ -94,6 +94,42 @@
             align-items: center;
         }
 
+        .nav-menu .has-dropdown {
+            position: relative;
+        }
+
+        .nav-menu .has-dropdown .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            padding: 0.5rem 0;
+            min-width: 180px;
+            display: none;
+            z-index: 1002;
+        }
+
+        .nav-menu .has-dropdown:hover .dropdown {
+            display: block;
+        }
+
+        .nav-menu .dropdown li {
+            margin: 0;
+        }
+
+        .nav-menu .dropdown a.nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            white-space: nowrap;
+        }
+
+        .nav-menu .cta-button {
+            margin-left: 0.5rem;
+        }
+
         .nav-link {
             text-decoration: none;
             color: var(--text-dark);
@@ -1505,13 +1541,17 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#events" class="nav-link">Events</a></li>
-                <li><a href="#courses" class="nav-link">Courses</a></li>
+                <li class="has-dropdown">
+                    <a href="#programs" class="nav-link">Programs</a>
+                    <ul class="dropdown">
+                        <li><a href="#events" class="nav-link">Events</a></li>
+                        <li><a href="#courses" class="nav-link">Courses</a></li>
+                    </ul>
+                </li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#resources" class="nav-link">Resources</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="https://yt9s1yyrflrkiqk1qx0k.app.clientclub.net/login" class="nav-link" target="_blank" rel="noopener noreferrer">Login</a></li>
+                <li><a href="https://yt9s1yyrflrkiqk1qx0k.app.clientclub.net/login" class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="Login"><i class="fas fa-user"></i></a></li>
                 <li><a href="#services" class="cta-button">Book Session</a></li>
             </ul>
             <div class="mobile-menu-toggle">
@@ -1526,13 +1566,17 @@
             <ul>
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#events" class="nav-link">Events</a></li>
-                <li><a href="#courses" class="nav-link">Courses</a></li>
+                <li class="has-dropdown">
+                    <a href="#programs" class="nav-link">Programs</a>
+                    <ul class="dropdown">
+                        <li><a href="#events" class="nav-link">Events</a></li>
+                        <li><a href="#courses" class="nav-link">Courses</a></li>
+                    </ul>
+                </li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#resources" class="nav-link">Resources</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="https://yt9s1yyrflrkiqk1qx0k.app.clientclub.net/login" class="nav-link" target="_blank" rel="noopener noreferrer">Login</a></li>
+                <li><a href="https://yt9s1yyrflrkiqk1qx0k.app.clientclub.net/login" class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="Login"><i class="fas fa-user"></i></a></li>
                 <li><a href="#services" class="cta-button">Book Session</a></li>
             </ul>
         </div>
