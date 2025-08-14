@@ -1461,6 +1461,37 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Courses UX refinements */
+        #courses .service-card .service-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 16px;
+            border: 2px solid var(--primary-color);
+        }
+
+        #courses .service-card ul {
+            margin: 0.5rem 0 0.75rem;
+            padding-left: 1.25rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+        }
+
+        #courses .service-card ul li {
+            line-height: 1.5;
+        }
+
+        #courses .service-card .btn-explore {
+            background: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+
+        #courses .service-card .btn-explore:hover {
+            filter: brightness(0.95);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
@@ -1601,7 +1632,7 @@
         <div class="container">
             <div class="section-header scroll-reveal">
                 <h2 class="section-title">Courses</h2>
-                <p class="section-subtitle">Self-paced programs to deepen your practice. Details coming soon.</p>
+                <p class="section-subtitle">Actionable, self-paced programs to build lasting focus and calm.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card scroll-reveal">
