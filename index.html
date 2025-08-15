@@ -301,6 +301,8 @@
                 width: 90%;
                 max-width: 600px;
                 max-height: 90vh;
+                display: flex;
+                flex-direction: column;
                 overflow: hidden;
                 animation: slideInUp 0.3s ease-out;
             }
@@ -337,6 +339,9 @@
             .booking-modal-body {
                 padding: 1rem;
                 background: var(--white);
+                flex: 1;
+                overflow: auto;
+                -webkit-overflow-scrolling: touch;
             }
 
             @keyframes slideInUp {
@@ -2232,7 +2237,7 @@
                 <span class="booking-modal-close" onclick="closeBookingModal()">&times;</span>
             </div>
             <div class="booking-modal-body">
-                <iframe src="https://link.actionpotential.ai/widget/booking/MzXct0rjQO6nMpLIGMi6" style="width: 100%; height: 500px; border: none;" scrolling="no" id="MzXct0rjQO6nMpLIGMi6_modal"></iframe>
+                <iframe src="https://link.actionpotential.ai/widget/booking/MzXct0rjQO6nMpLIGMi6" style="width: 100%; height: 100%; border: none;" scrolling="auto" id="MzXct0rjQO6nMpLIGMi6_modal"></iframe>
             </div>
         </div>
     </div>
