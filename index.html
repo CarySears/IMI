@@ -1123,12 +1123,62 @@
             background: var(--background-light);
         }
 
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .testimonial-slider {
+            position: relative;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.4s ease;
+            will-change: transform;
+        }
+        .testimonial-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .testimonial-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .testimonial-arrow {
+            background: var(--white);
+            border: 1px solid rgba(0,0,0,0.08);
+            box-shadow: var(--shadow-light);
+            border-radius: 999px;
+            width: 44px;
+            height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .testimonial-arrow:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+        .testimonial-dots {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .testimonial-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.2);
+            transition: var(--transition);
+        }
+        .testimonial-dot.active {
+            width: 24px;
+            border-radius: 999px;
+            background: var(--primary-color);
         }
 
+        /* Testimonial Card Styles */
         .testimonial-card {
             background: var(--white);
             padding: 2rem;
@@ -1136,7 +1186,6 @@
             box-shadow: var(--shadow-light);
             position: relative;
         }
-
         .testimonial-card::before {
             content: '"';
             position: absolute;
@@ -1146,37 +1195,12 @@
             color: var(--accent-color);
             font-family: 'Playfair Display', serif;
         }
-
         .testimonial-text {
             color: var(--text-light);
             font-style: italic;
             margin-bottom: 1.5rem;
             padding-top: 1rem;
         }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 600;
-        }
-
-        .author-info h4 {
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
         .author-info p {
             color: var(--text-light);
             font-size: 0.9rem;
@@ -1766,36 +1790,73 @@
                 <h2 class="section-title">What Our Clients Say</h2>
                 <p class="section-subtitle">Real stories from people who have transformed their lives through our mindfulness and therapy programs.</p>
             </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card scroll-reveal">
-                    <p class="testimonial-text">The mindfulness techniques I learned here have completely changed how I handle stress and anxiety. Monte and Jai created a safe space for healing that I never thought possible.</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">S</div>
-                        <div class="author-info">
-                            <h4>Sarah M.</h4>
-                            <p>Anxiety & Stress Management</p>
+            <div class="testimonial-slider" id="testimonialSlider">
+                <div class="testimonial-track">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">He's been great so far!</p>
+                            <div class="author-info">
+                                <p>Written on Apr 24, 2025 after therapy with Lamont for 2 weeks on issues concerning addictions, coping with life changes, and ADHD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">Lamont did a great job and helped me consider some new tools for acute stress management that I can implement into my routines and daily life</p>
+                            <div class="author-info">
+                                <p>Written on Jan 17, 2025 after therapy with Lamont for 2 months on issues concerning stress, anxiety, anger management, career difficulties, coaching, and ADHD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">Lamont has been instrumental in helping me to build a strong foundation of tools to cope with not only long term stress, but also with everyday anxiety and anxiety triggers. His integration of breathing exercises, stoic philosophy and meta cognition may not be for everyone, but his techniques and practices are EXACTLY what I needed. I am in an infinitely "better place" because of Lamont's help.</p>
+                            <div class="author-info">
+                                <p>Written on Oct 04, 2024 after therapy with Lamont for 10 months on issues concerning depression, stress, anxiety, relationship issues, family conflicts, intimacy-related issues, parenting issues, self esteem, anger management, career difficulties, and coaching</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">I've only been with Lamont for 2 sessions and feel I am in a better place than when I started.
+
+He is polite and respectful, and listens and acknowledges what I have to say and have been going through.
+
+He's given me a variety of tools that have been helpful in my healing journey so far, and can't wait to chat with him each week!</p>
+                            <div class="author-info">
+                                <p>Written on Mar 15, 2024 after therapy with Lamont for 2 weeks on issues concerning stress, anxiety, addictions, self esteem, anger management, compassion fatigue, and ADHD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">Through simple breathing techniques and a kind heart Lamont has transformed my life. I live a very positive lifestyle now and prioritize my happiness.</p>
+                            <div class="author-info">
+                                <p>Written on Feb 09, 2024 after therapy with Lamont for 5 months on issues concerning depression, relationship issues, anger management, and ADHD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">Excellent at teaching the tools needed to help with the mental health. Highly recommend.</p>
+                            <div class="author-info">
+                                <p>Written on Nov 04, 2023 after therapy with Lamont for 2 weeks on issues concerning depression, stress, anxiety, addictions, family conflicts, grief, self esteem, anger management, career difficulties, and coping with life changes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">I've been seeing Lamont for not very long at all and he's been able to listen and more importantly he's given me tools to apply in my day to day that have actually helped</p>
+                            <div class="author-info">
+                                <p>Written on Sep 20, 2023 after therapy with Lamont for 2 weeks on issues concerning depression, stress, anxiety, trauma and abuse, self esteem, anger management, coping with life changes, compassion fatigue, and ADHD</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card scroll-reveal">
-                    <p class="testimonial-text">As a veteran struggling with PTSD, I found the specialized support here invaluable. The combination of therapy and mindfulness practices has given me tools I use every day.</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">M</div>
-                        <div class="author-info">
-                            <h4>Michael R.</h4>
-                            <p>Veteran - PTSD Recovery</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card scroll-reveal">
-                    <p class="testimonial-text">The life coaching sessions helped me discover my true potential. I've achieved goals I never thought possible and developed a much healthier relationship with myself.</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">L</div>
-                        <div class="author-info">
-                            <h4>Lisa K.</h4>
-                            <p>Life Coaching Client</p>
-                        </div>
-                    </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-arrow" id="testimonialPrev" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots" id="testimonialDots"></div>
+                    <button class="testimonial-arrow" id="testimonialNext" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>
@@ -2203,6 +2264,48 @@
                 }
             });
         });
+
+        // Testimonials carousel
+        (function(){
+            const slider = document.getElementById('testimonialSlider');
+            if (!slider) return;
+            const track = slider.querySelector('.testimonial-track');
+            const slides = Array.from(slider.querySelectorAll('.testimonial-slide'));
+            const prev = document.getElementById('testimonialPrev');
+            const next = document.getElementById('testimonialNext');
+            const dotsContainer = document.getElementById('testimonialDots');
+            let index = 0;
+
+            function update() {
+                const offset = -index * 100;
+                track.style.transform = `translateX(${offset}%)`;
+                dotsContainer.querySelectorAll('.testimonial-dot').forEach((d, i) => {
+                    d.classList.toggle('active', i === index);
+                });
+            }
+
+            // Build dots
+            slides.forEach((_, i) => {
+                const dot = document.createElement('div');
+                dot.className = 'testimonial-dot' + (i === 0 ? ' active' : '');
+                dot.addEventListener('click', () => { index = i; update(); });
+                dotsContainer.appendChild(dot);
+            });
+
+            prev.addEventListener('click', () => {
+                index = (index - 1 + slides.length) % slides.length;
+                update();
+            });
+            next.addEventListener('click', () => {
+                index = (index + 1) % slides.length;
+                update();
+            });
+
+            // Auto-advance every 7s
+            let timer = setInterval(() => { next.click(); }, 7000);
+            slider.addEventListener('mouseenter', () => clearInterval(timer));
+            slider.addEventListener('mouseleave', () => { timer = setInterval(() => { next.click(); }, 7000); });
+        })();
     </script>
 
     <!-- Start Engagement Widget Script -->
