@@ -1648,7 +1648,7 @@
                     <p>Personalized self-care routines based on Jai's library of tools and your goals. Develop sustainable wellness practices tailored to your unique needs.</p>
                     <div class="service-price">$120</div>
                     <div class="service-buttons">
-                        <button class="btn-book" onclick="openBookingModal()">Book Now</button>
+                        <button class="btn-book" onclick="openBookingModal('https://link.actionpotential.ai/widget/booking/MzXct0rjQO6nMpLIGMi6', 'Book Your Session with Jai')">Book Now</button>
                     </div>
                 </div>
                 <div class="service-card scroll-reveal">
@@ -1657,7 +1657,7 @@
                     <p>Learn practical mind skills that build empowerment, resilience, and a growth mindset for lasting positive change.</p>
                     <div class="service-price">$120</div>
                     <div class="service-buttons">
-                        <button class="btn-book" onclick="openBookingModal()">Book Now</button>
+                        <button class="btn-book" onclick="openBookingModal('https://link.actionpotential.ai/widget/booking/So0suHwmuIBuxEtMW8f5', 'Book Your Session with Monte')">Book Now</button>
                     </div>
                 </div>
                 <div class="service-card scroll-reveal">
@@ -1666,7 +1666,7 @@
                     <p>Integrative body-based therapy to release stored stress and trauma, regulate the nervous system, and restore mind-body balance.</p>
                     <div class="service-price">$150</div>
                     <div class="service-buttons">
-                        <button class="btn-book" onclick="openBookingModal()">Book Now</button>
+                        <button class="btn-book" onclick="openBookingModal('https://link.actionpotential.ai/widget/booking/MzXct0rjQO6nMpLIGMi6', 'Book Your Session with Jai')">Book Now</button>
                     </div>
                 </div>
                 <div class="service-card scroll-reveal">
@@ -2214,8 +2214,21 @@ He's given me a variety of tools that have been helpful in my healing journey so
         });
 
         // Booking Modal Functions
-        function openBookingModal() {
+        function openBookingModal(calendarUrl, titleText) {
             const modal = document.getElementById('bookingModal');
+            const iframe = document.getElementById('bookingModalIframe');
+            const titleEl = document.getElementById('bookingModalTitle');
+
+            const defaultUrl = 'https://link.actionpotential.ai/widget/booking/MzXct0rjQO6nMpLIGMi6';
+            const defaultTitle = 'Book Your Session with Jai';
+
+            if (iframe) {
+                iframe.src = calendarUrl || defaultUrl;
+            }
+            if (titleEl) {
+                titleEl.textContent = titleText || defaultTitle;
+            }
+
             modal.classList.add('show');
             document.body.style.overflow = 'hidden';
         }
@@ -2365,11 +2378,11 @@ He's given me a variety of tools that have been helpful in my healing journey so
     <div id="bookingModal" class="booking-modal">
         <div class="booking-modal-content">
             <div class="booking-modal-header">
-                <h3>Book Your Session with Jai</h3>
+                <h3 id="bookingModalTitle">Book Your Session with Jai</h3>
                 <span class="booking-modal-close" onclick="closeBookingModal()">&times;</span>
             </div>
             <div class="booking-modal-body">
-                <iframe src="https://link.actionpotential.ai/widget/booking/MzXct0rjQO6nMpLIGMi6" style="width: 100%; height: 100%; border: none;" scrolling="auto" id="MzXct0rjQO6nMpLIGMi6_modal"></iframe>
+                <iframe src="https://link.actionpotential.ai/widget/booking/MzXct0rjQO6nMpLIGMi6" style="width: 100%; height: 100%; border: none;" scrolling="auto" id="bookingModalIframe"></iframe>
             </div>
         </div>
     </div>
